@@ -23,7 +23,7 @@
         <optoon value= "Teología">Teología</optoon> 
       </select>
       <label for="selectsort1">Filtrar por corriente</label>
-      <select id="select-sort1" data-testid="select-sort1" name="branch">
+      <select id="select-sort1" data-testid="select-sort1" name="type">
         <option value="">Selecciona una corriente</option>
         <option value="Empirismo">Empirismo</option>
         <option value="Idealismo alemán">Idealismo alemán</option>
@@ -32,6 +32,12 @@
         <option value="Idealismo">Idealismo</option>
         <option value= "Escolástica">Escolástica</option>
       </select>
+      <label for="selectsort2">Filtrar por Tradición</label>
+      <select id="select-sort2" data-testid="select-sort2" name="classification">
+        <option value="">Selecciona una tradición</option>
+        <option value="Filosofía analítica">Analítica</option>
+        <option value="Filosofía continental">Continental</option>
+      </select>
       <input type="radio" name="sort-order" value="asc" id="sort-asc" />
       <label for="sort-asc">Más antiguo</label>
       <input type="radio" name="sort-order" value="desc" id="sortdesc" />
@@ -39,6 +45,7 @@
       <section id="root"></section>
       <button data-testid="button-clear">Limpiar</button>
       <button data-testid="show-stats">Mostrar Estadísticas</button>
+      <article id="stats"></article>
     </main>
     <footer>&copy; Philosophy</footer>
     <script src="main.js" type="module"></script>
