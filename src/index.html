@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Dataverse</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <h1>Take a Dive in Philosophy</h1>
+    </header>
+    <main>
+      <h2>Filósofos a través de las épocas</h2>
+      <label for="select-sort">Filtrar por rama</label>
+      <select id="select-sort" data-testid="select-sort" name="branch">
+        <option value="">Selecciona una rama</option>
+        <option value="Ética">Ética</option>
+        <option value="Teoría de género">Teoría de Género</option>
+        <option value="Epistemología">Epistemología</option>
+        <option value="Metafísica">Metafísica</option>
+        <option value="Lógica">Lógica</option>
+        <option value= "Filosofía política">F. Política</option>
+        <optoon value= "Teología">Teología</optoon> 
+      </select>
+      <label for="selectsort1">Filtrar por corriente</label>
+      <select id="select-sort1" data-testid="select-sort1" name="branch">
+        <option value="">Selecciona una corriente</option>
+        <option value="Empirismo">Empirismo</option>
+        <option value="Idealismo alemán">Idealismo alemán</option>
+        <option value="Racionalismo">Racionalismo</option>
+        <option value="Existencialismo">Existencialismo</option>
+        <option value="Idealismo">Idealismo</option>
+        <option value= "Escolástica">Escolástica</option>
+      </select>
+      <input type="radio" name="sort-order" value="asc" id="sort-asc" />
+      <label for="sort-asc">Más antiguo</label>
+      <input type="radio" name="sort-order" value="desc" id="sortdesc" />
+      <label for="sort-desc">Mas reciente</label>
+      <section id="root"></section>
+      <button data-testid="button-clear">Limpiar</button>
+      <button data-testid="show-stats">Mostrar Estadísticas</button>
+    </main>
+    <footer>&copy; Philosophy</footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
