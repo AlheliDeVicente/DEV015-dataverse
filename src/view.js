@@ -15,6 +15,8 @@ export const renderItems = (data) => {
     <p itemprop="gender"><strong>Género:</strong> ${philosophers.facts.gender}
     <p itemprop="branchOfPhilosophy"><strong>Ramas de la filosofía:</strong> ${philosophers.branchOfPhilosophy.join(", ")}</p>
     <p itemprop="typeOfPhilosophy"><strong>Corrientes:</strong> ${philosophers.typeOfPhilosophy.join(", ")}</p>
+    <p itemprop="classification"><strong>Tradición:</strong> ${philosophers.facts.classification}</p>
+    <p itemprop="century"><strong>Siglo:</strong> ${philosophers.facts.century}</p>
     <div itemprop="mainWorks">
     <h4>Obras Principales</h4> ${philosophers.mainWorks.map(work=>
     `<p><strong>Título:</strong> ${work.title} <strong>Año:</strong> ${work.year}</p>`).join(" ")} 
@@ -27,5 +29,6 @@ export const renderItems = (data) => {
   const section = document.getElementById("root");
   section.innerHTML = "";
   //agregar el elemento ul al section//
-  return section.appendChild(ul) };
+  section.appendChild(ul) 
+  return section };
 renderItems

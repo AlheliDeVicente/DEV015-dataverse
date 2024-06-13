@@ -51,7 +51,7 @@ export default [
     typeOfPhilosophy: ["Monismo"],
     facts: {
       century: -500,
-      classification: "Filosofía antigua",
+      classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Sus ideas sobre el ser y la permanencia contrastan con el pensamiento de Heráclito."
     }
