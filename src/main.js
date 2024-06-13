@@ -47,7 +47,9 @@ radioButtons.forEach(function (radio) {
 cleanButton.addEventListener("click", ()=>{
   typeSelector.value="" //se le da el valor "" a los filtros//
   branchSelector.value="" //se le da el valor "" a los filtros//
+  classSelector.value="" //se le da el valor "" a los filtros//
   filteredData = data //la constante data es toda la data//
+
   statsSection.innerHTML=""
   renderItems(filteredData) //se muestra toda la data//
 })
