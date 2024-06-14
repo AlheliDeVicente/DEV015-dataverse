@@ -7,9 +7,10 @@ export const renderItems = (data) => {
     //atriburos de microdatos//
     card.setAttribute("itemscope", "");
     card.setAttribute("itemtype", "https://schema.org/Person");
+    card.setAttribute("class", "philosophersCard")
     //insertar contenido html al li//
     card.innerHTML = `
-    <img src="${philosophers.imageUrl}" alt="${philosophers.name}" itemprop="image"/>
+    <img src= "${philosophers.imageUrl}" alt="${philosophers.name}" itemprop="image"/>
     <h3 itemprop="givenName">${philosophers.name}</h3>
     <p itemprop="description"><strong>Descripción:</strong> ${philosophers.shortDescription}</p>
     <p itemprop="gender"><strong>Género:</strong> ${philosophers.facts.gender}
@@ -20,7 +21,6 @@ export const renderItems = (data) => {
     <div itemprop="mainWorks">
     <h4>Obras Principales</h4> ${philosophers.mainWorks.map(work=>
     `<p><strong>Título:</strong> ${work.title} <strong>Año:</strong> ${work.year}</p>`).join(" ")} 
-    </div>
     `
     //agregar tarjeta al ul//
     ul.appendChild(card);
