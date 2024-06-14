@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@100..900&display=swap');
+[itemprop="image"]{
+    width: 400px;
+    height:400px;
+    border-radius:160px;
+    border:10px solid #666;
+}
+body::before{
+    background-image: url("https://i.pinimg.com/564x/64/11/6b/64116b14fbcc5add172ea6ce965c3355.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+    z-index: -1;
+    position: fixed;
+    }
+ul{
+    width:90%;
+    margin:60px 0;
+    max-width: 1200px;
+    min-height:100vh;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    gap: 3.5em;
+    flex-flow: row wrap
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@100..900&display=swap');
+
+[itemprop="image"]{
+    width: 400px;
+    height: 400px;
+    border-radius: 160px;
+    border: 10px solid #666;
+}
+
+body::before{
+    background-image: url("https://i.pinimg.com/564x/64/11/6b/64116b14fbcc5add172ea6ce965c3355.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+    z-index: -1;
+    position: fixed;
+}
+
+ul{
+    width: 90%;
+    margin: 60px 0;
+    max-width: 1200px;
+    min-height: 100vh;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    gap: 3.5em;
+    flex-flow: row wrap;
+}
+
+.philosophersCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #bfb0a3a6;
+    border-width: 30px;
+    border-radius: 100px;
+    flex-grow: 1;
+    flex-basis: 280px; 
+    max-width: 900px;
+}
+main{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    width:100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    flex-flow:column wrap;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content:flex-end;
+    align-items:flex-end
+}
+h1{
+    font-family: "Judson", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+h2{
+    font-family: "Judson", serif;
+    font-weight: 800;
+    font-style: normal;
+ }
+ 
