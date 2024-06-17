@@ -1,6 +1,7 @@
 import { filterData } from "./dataFunctions.js";
 import { sortData } from "./dataFunctions.js";
-import { computeStats } from "./dataFunctions.js";
+import { womenPhilosophersStats } from "./dataFunctions.js";
+import { philosophersBeforeXIXStats } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
 
@@ -59,16 +60,17 @@ cleanButton.addEventListener("click", () => {
   branchSelector.value = ""; //se le da el valor "" a los filtros//
   classSelector.value = ""; //se le da el valor "" a los filtros//
   filteredData = data; //la constante data es toda la data//
-
   statsSection.innerHTML = "";
   renderItems(filteredData); //se muestra toda la data//
-});
+})
 
 //boton de mostrar data//
 statsButton.addEventListener("click", () => {
   const statsParagraphs = document.createElement("p");
-  const computedStats = computeStats(data);
-  statsParagraphs.innerHTML = `Hay un promedio de ${computedStats}% mujeres filosofas`;
-  statsSection.appendChild(statsParagraphs); // Añadir el div al cuerpo del documento
+  const womenPhilosophers = womenPhilosophersStats(data)
+  const philosophersBeforeXIX = philosophersBeforeXIXStats(data);
+  statsParagraphs.innerHTML = `<p> Hay un promedio de ${womenPhilosophers}% mujeres filosofas</p>  
+  <p> Alrededor de ${philosophersBeforeXIX}% de los filósofos son anteriores al siglo XIX</p>`;
+  statsSection.appendChild(statsParagraphs); // Añadir el p al cuerpo del documento
 });
 renderItems(data);
