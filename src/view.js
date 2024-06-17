@@ -17,7 +17,7 @@ export const renderItems = (data) => {
     <p itemprop="branchOfPhilosophy"><strong>Ramas de la filosofía:</strong> ${philosophers.branchOfPhilosophy.join(", ")}</p>
     <p itemprop="typeOfPhilosophy"><strong>Corrientes:</strong> ${philosophers.typeOfPhilosophy.join(", ")}</p>
     <p itemprop="classification"><strong>Tradición:</strong> ${philosophers.facts.classification}</p>
-    <p itemprop="century"><strong>Siglo:</strong> ${philosophers.facts.century}</p>
+    <p itemprop="century"><strong>Año de nacimiento:</strong> ${philosophers.facts.century}</p>
     <div itemprop="mainWorks">
     <h4>Obras Principales</h4> ${philosophers.mainWorks.map(work=>
     `<p><strong>Título:</strong> ${work.title} <strong>Año:</strong> ${work.year}</p>`).join(" ")} 
@@ -25,10 +25,5 @@ export const renderItems = (data) => {
     //agregar tarjeta al ul//
     ul.appendChild(card);
   });
-  //obtener el elemento en donde se insertarán la ul con las tarjetas//
-  const section = document.getElementById("root");
-  section.innerHTML = "";
-  //agregar el elemento ul al section//
-  section.appendChild(ul) 
-  return section };
+  return ul };
 renderItems

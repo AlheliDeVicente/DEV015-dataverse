@@ -60,3 +60,14 @@ export const philosophersBeforeXIXStats = function (data) {
   const percentage = (philosophersBeforeXIX/data.length)*100
   return percentage.toFixed(2)
 };
+export const analyticPhilosopherStats = function (data) {
+  const philosophersBeforeXIX = data.reduce((totalPhilosophers, philosopher) => {
+    if (philosopher.facts.classification === "Filosofía analítica") {
+      return totalPhilosophers + 1;
+    } else {
+      return totalPhilosophers;
+    }
+  }, 0);
+  const percentage = (philosophersBeforeXIX/data.length)*100
+  return percentage.toFixed(2)
+};

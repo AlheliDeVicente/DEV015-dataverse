@@ -14,7 +14,7 @@ export default [
     branchOfPhilosophy: ["Metafísica", "Epistemología", "Ética"],
     typeOfPhilosophy: ["Idealismo"],
     facts: {
-      century: -400,
+      century: -427,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Fundó la Academia de Atenas, donde estudió Aristóteles."
@@ -32,7 +32,7 @@ export default [
     branchOfPhilosophy: ["Metafísica"],
     typeOfPhilosophy: ["Escepticismo"],
     facts: {
-      century: -600,
+      century: -535,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Es conocido por sus escritos oscuros y enigmáticos."
@@ -50,7 +50,7 @@ export default [
     branchOfPhilosophy: ["Metafísica"],
     typeOfPhilosophy: ["Monismo"],
     facts: {
-      century: -500,
+      century: -530,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Sus ideas sobre el ser y la permanencia contrastan con el pensamiento de Heráclito."
@@ -71,7 +71,7 @@ export default [
     branchOfPhilosophy: ["Metafísica", "Ética", "Lógica"],
     typeOfPhilosophy: ["Empirismo"],
     facts: {
-      century: -400,
+      century: -384,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Fundó la lógica formal y tuvo una enorme influencia en el pensamiento occidental."
@@ -91,7 +91,7 @@ export default [
     branchOfPhilosophy: ["Ética"],
     typeOfPhilosophy: ["Hedonismo"],
     facts: {
-      century: -300,
+      century: -341,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Su filosofía fue malinterpretada como una llamada al exceso."
@@ -111,7 +111,7 @@ export default [
     branchOfPhilosophy: ["Ética", "Lógica"],
     typeOfPhilosophy: ["Estoicismo"],
     facts: {
-      century: -300,
+      century: -334,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Sus enseñanzas influyeron en la ética de los romanos."
@@ -132,7 +132,7 @@ export default [
     branchOfPhilosophy: ["Teología", "Ética"],
     typeOfPhilosophy: ["Neoplatonismo"],
     facts: {
-      century: 300,
+      century: 354,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Su obra 'Confesiones' es una autobiografía espiritual que ha influido en la literatura cristiana."
@@ -152,7 +152,7 @@ export default [
     branchOfPhilosophy: ["Teología", "Metafísica"],
     typeOfPhilosophy: ["Escolástica"],
     facts: {
-      century: 1200,
+      century: 1274,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Es conocido como el 'Doctor Angélico' y fue canonizado en 1323."
@@ -172,7 +172,7 @@ export default [
     branchOfPhilosophy: ["Metafísica", "Filosofía de la ciencia"],
     typeOfPhilosophy: ["Aristotelismo"],
     facts: {
-      century: 1100,
+      century: 1126,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Sus trabajos fueron traducidos al latín e influyeron en la escolástica europea."
@@ -193,7 +193,7 @@ export default [
     branchOfPhilosophy: ["Filosofía política"],
     typeOfPhilosophy: ["Realismo político"],
     facts: {
-      century: 1500,
+      century: 1496,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Su obra 'El Príncipe' es considerada una guía pragmática para el gobierno y la política."
@@ -213,7 +213,7 @@ export default [
     branchOfPhilosophy: ["Metafísica", "Filosofía de la naturaleza"],
     typeOfPhilosophy: ["Hermetismo", "Panteísmo"],
     facts: {
-      century: 1500,
+      century: 1548,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Fue condenado a muerte por la Inquisición y quemado en la hoguera en 1600 por sus ideas heréticas."
@@ -233,7 +233,7 @@ export default [
     branchOfPhilosophy: ["Metafísica", "Teología"],
     typeOfPhilosophy: ["Misticismo", "Humanismo"],
     facts: {
-      century: 1400,
+      century: 1401,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Fue un precursor del pensamiento moderno y su concepto de la 'docta ignorancia' influyó en muchos filósofos posteriores."
@@ -254,7 +254,7 @@ export default [
     branchOfPhilosophy: ["Epistemología", "Ética"],
     typeOfPhilosophy: ["Empirismo"],
     facts: {
-      century: 1700,
+      century: 1711,
       classification: "Filosofía analítica",
       gender: "Masculino",
       extraInfo: "Su empirismo radical influyó profundamente en la filosofía moderna y contemporánea."
@@ -274,7 +274,7 @@ export default [
     branchOfPhilosophy: ["Epistemología", "Filosofía política"],
     typeOfPhilosophy: ["Empirismo"],
     facts: {
-      century: 1600,
+      century: 1632,
       classification: "Filosofía analítica",
       gender: "Masculino",
       extraInfo: "Su teoría del conocimiento influyó en la Revolución Científica y la Ilustración."
@@ -294,7 +294,7 @@ export default [
     branchOfPhilosophy: ["Ética", "Filosofía de la educación"],
     typeOfPhilosophy: ["Escolástica", "Feminismo"],
     facts: {
-      century: 1600,
+      century: 1648,
       classification: "Filosofía continental",
       gender: "Femenino",
       extraInfo: "Fue una defensora de los derechos de las mujeres a la educación y al conocimiento."
@@ -314,7 +314,7 @@ export default [
     branchOfPhilosophy: ["Metafísica", "Epistemología"],
     typeOfPhilosophy: ["Racionalismo"],
     facts: {
-      century: 1600,
+      century: 1596,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Es conocido por el desarrollo de la geometría cartesiana."
@@ -335,7 +335,7 @@ export default [
     branchOfPhilosophy: ["Epistemología", "Ética"],
     typeOfPhilosophy: ["Idealismo alemán"],
     facts: {
-      century: 1800,
+      century: 1724,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Su filosofía crítica intentó sintetizar el racionalismo y el empirismo."
@@ -355,7 +355,7 @@ export default [
     branchOfPhilosophy: ["Metafísica", "Ética"],
     typeOfPhilosophy: ["Idealismo alemán"],
     facts: {
-      century: 1900,
+      century: 1770,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Su filosofía influyó en el marxismo, el existencialismo y la fenomenología."
@@ -375,7 +375,7 @@ export default [
     branchOfPhilosophy: ["Metafísica", "Ética"],
     typeOfPhilosophy: ["Racionalismo"],
     facts: {
-      century: 1600,
+      century: 1677,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Fue excomulgado de la comunidad judía por sus ideas heréticas."
@@ -396,7 +396,7 @@ export default [
     branchOfPhilosophy: ["Ética", "Metafísica"],
     typeOfPhilosophy: ["Existencialismo", "Nihilismo"],
     facts: {
-      century: 1800,
+      century: 1844,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Sus ideas sobre la moral y la cultura han sido influyentes y controvertidas."
@@ -416,7 +416,7 @@ export default [
     branchOfPhilosophy: ["Existencialismo", "Absurdismo"],
     typeOfPhilosophy: ["Absurdismo", "Existencialismo"],
     facts: {
-      century: 1900,
+      century: 1913,
       classification: "Filosofía continental",
       gender: "Masculino",
       extraInfo: "Rechazó el existencialismo como etiqueta para su trabajo, prefiriendo ser visto como un filósofo del absurdo."
@@ -436,7 +436,7 @@ export default [
     branchOfPhilosophy: ["Filosofía del lenguaje", "Lógica"],
     typeOfPhilosophy: ["Positivismo lógico"],
     facts: {
-      century: 1900,
+      century: 1889,
       classification: "Filosofía analítica",
       gender: "Masculino",
       extraInfo: "Considerado uno de los filósofos más influyentes del siglo XX."
@@ -457,7 +457,7 @@ export default [
     branchOfPhilosophy: ["Epistemología", "Filosofía política"],
     typeOfPhilosophy: ["Filosofía crítica", "Filosofía de la raza"],
     facts: {
-      century: 2000,
+      century: 1973,
       classification: "Filosofía analítica",
       gender: "Masculino",
       extraInfo: "Su trabajo se centra en temas de justicia social y epistemología crítica."
@@ -477,7 +477,7 @@ export default [
     branchOfPhilosophy: ["Teoría de género", "Filosofía política"],
     typeOfPhilosophy: ["Filosofía crítica"],
     facts: {
-      century: 2000,
+      century: 1956,
       classification: "Filosofía continental",
       gender: "Femenino",
       extraInfo: "Ha influido profundamente en los estudios de género y la teoría queer."
