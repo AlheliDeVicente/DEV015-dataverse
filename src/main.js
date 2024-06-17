@@ -1,4 +1,4 @@
-import { analyticPhilosopherStats, filterData, sortData, womenPhilosophersStats, philosophersBeforeXIXStats } from "./dataFunctions.js";
+import { analyticPhilosopherStats, filterData, sortData, womenPhilosophersStats, philosophersBeforeXIXStats} from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
 

@@ -9,7 +9,6 @@
     border-radius: 200px;
     border: 5px solid #fffcfc67;
   }
-
 body::before{
     background-image: url("assets/image.jpg");
     background-repeat: no-repeat;
@@ -98,6 +97,8 @@ h2{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    background-color: #d8d7d32a;
+
   }
   footer {
     font-family: "Lora", serif;
@@ -145,4 +146,9 @@ h2{
     font-weight: 400;
     font-style: bold;
   }
-  
+  tr{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }

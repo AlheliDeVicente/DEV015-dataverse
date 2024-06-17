@@ -12,42 +12,112 @@
     <main>
       <h2>Explora y encuentra a tu filósofo preferido</h2>
       <nav class="filters">
-          <label for="select-sort">Filtrar por rama</label>
-          <select id="select-sort" data-testid="select-sort" name="branch">
-            <option value="">Selecciona una rama</option>
-            <option value="Ética">Ética</option>
-            <option value="Teoría de género">Teoría de Género</option>
-            <option value="Epistemología">Epistemología</option>
-            <option value="Metafísica">Metafísica</option>
-            <option value="Lógica">Lógica</option>
-            <option value="Filosofía política">F. Política</option>
-            <option value="Teología">Teología</option>
-          </select>
-          <label for="select-sort1">Filtrar por corriente</label>
-          <select id="select-sort1" data-testid="select-sort1" name="type">
-            <option value="">Selecciona una corriente</option>
-            <option value="Empirismo">Empirismo</option>
-            <option value="Idealismo alemán">Idealismo alemán</option>
-            <option value="Racionalismo">Racionalismo</option>
-            <option value="Existencialismo">Existencialismo</option>
-            <option value="Idealismo">Idealismo</option>
-            <option value="Escolástica">Escolástica</option>
-          </select> 
-          <label for="select-sort2">Filtrar por Tradición</label>
-          <select id="select-sort2" data-testid="select-sort2" name="classification">
-            <option value="">Selecciona una tradición</option>
-            <option value="Filosofía analítica">Analítica</option>
-            <option value="Filosofía continental">Continental</option>
-          </select>
-          <input type="radio" name="sort-order" value="asc" id="sort-asc" />
-          <label for="sort-asc">Más antiguo</label>
-          <input type="radio" name="sort-order" value="desc" id="sort-desc" />
-          <label for="sort-desc">Más reciente</label>
+        <label for="select-sort">Filtrar por rama</label>
+        <select id="select-sort" data-testid="select-sort" name="branch">
+          <option value="">Selecciona una rama</option>
+          <option value="Ética">Ética</option>
+          <option value="Teoría de género">Teoría de Género</option>
+          <option value="Epistemología">Epistemología</option>
+          <option value="Metafísica">Metafísica</option>
+          <option value="Lógica">Lógica</option>
+          <option value="Filosofía política">F. Política</option>
+          <option value="Teología">Teología</option>
+        </select>
+        <label for="select-sort1">Filtrar por corriente</label>
+        <select id="select-sort1" data-testid="select-sort1" name="type">
+          <option value="">Selecciona una corriente</option>
+          <option value="Empirismo">Empirismo</option>
+          <option value="Idealismo alemán">Idealismo alemán</option>
+          <option value="Racionalismo">Racionalismo</option>
+          <option value="Existencialismo">Existencialismo</option>
+          <option value="Idealismo">Idealismo</option>
+          <option value="Escolástica">Escolástica</option>
+        </select>
+        <label for="select-sort2">Filtrar por Tradición</label>
+        <select
+          id="select-sort2"
+          data-testid="select-sort2"
+          name="classification"
+        >
+          <option value="">Selecciona una tradición</option>
+          <option value="Filosofía analítica">Analítica</option>
+          <option value="Filosofía continental">Continental</option>
+        </select>
+        <input type="radio" name="sort-order" value="asc" id="sort-asc" />
+        <label for="sort-asc">Más antiguo</label>
+        <input type="radio" name="sort-order" value="desc" id="sort-desc" />
+        <label for="sort-desc">Más reciente</label>
         <button data-testid="button-clear">Limpiar</button>
-        </nav>
+      </nav>
       <section id="root"></section>
       <button data-testid="show-stats">Mostrar Estadísticas</button>
       <section id="stats"></section>
+    
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+  
+        google.charts.load('current', {'packages':['corechart']});
+  
+        google.charts.setOnLoadCallback(drawGenderChart);
+        google.charts.setOnLoadCallback(drawClassificationChart);
+  
+        function drawGenderChart() {
+  
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Gender');
+          data.addColumn('number', 'Philosophers');
+          data.addRows([
+            ['Women', 2],
+            ['Men', 22],
+          ]);
+  
+            var options = {
+            title: 'Filósofos por género',
+            is3D: true,
+            width: 400,
+            height: 240,
+            backgroundColor: 'transparent',
+            colors: ["#8C342B", "#59352D", "#854738", "#D98E73", "#D9BBA9", "#B56449"]
+          };
+  
+          // Instantiate and draw the chart for Sarah's pizza.
+          var chart = new google.visualization.PieChart(document.getElementById('gender_chart_div'));
+          chart.draw(data, options);
+        }
+  
+        function drawClassificationChart() {
+  
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Classification');
+          data.addColumn('number', 'Philosophers');
+          data.addRows([
+            ['Analítica', 4],
+            ['Continental', 20],
+                  ]);
+  
+           var options = {
+            title: 'Filósofos por tradición',
+            is3D: true,
+            width: 400,
+            height: 240,
+            backgroundColor: 'transparent',
+            colors: ["#8C342B", "#59352D", "#854738", "#D98E73", "#D9BBA9", "#B56449"]
+          };
+  
+  
+           var chart = new google.visualization.PieChart(document.getElementById('class_chart_div'));
+          chart.draw(data, options);
+        }
+      </script>
+    </head>
+    <body>
+      <!--Table and divs that hold the pie charts-->
+      <table class="columns">
+        <tr>
+          <td><div id="gender_chart_div" style="border: 1px solid #ccc"></div></td>
+          <td><div id="class_chart_div" style="border: 1px solid #ccc"></div></td>
+        </tr>
+      </table>
     </main>
     <footer>&copy; Philosophy</footer>
     <script src="main.js" type="module"></script>
