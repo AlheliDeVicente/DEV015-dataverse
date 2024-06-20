@@ -11,9 +11,13 @@
     </header>
     <main>
       <h2>Explora y encuentra a tu filósofo preferido</h2>
-      <nav class="filters">
-        <label for="select-sort">Filtrar por rama</label>
-        <select id="select-sort" data-testid="select-sort" name="branch">
+        <input type="checkbox" id="btn-menu">
+        <label for= "btn-menu" id="btn-label">&#9776;</label>
+      <div class="side-menu">
+        <label id="close-btn" for="btn-menu">&times;</label>
+        <aside class="filters">
+        <label for="select-filter">Rama</label>
+        <select id= "select-filter" data-testid="select-filter" name="branch">
           <option value="">Selecciona una rama</option>
           <option value="Ética">Ética</option>
           <option value="Teoría de género">Teoría de Género</option>
@@ -23,8 +27,8 @@
           <option value="Filosofía política">F. Política</option>
           <option value="Teología">Teología</option>
         </select>
-        <label for="select-sort1">Filtrar por corriente</label>
-        <select id="select-sort1" data-testid="select-sort1" name="type">
+      <label for="selectfilter1">Corriente</label>
+        <select id= "selectfilter1" data-testid="select-filter1" name="type">
           <option value="">Selecciona una corriente</option>
           <option value="Empirismo">Empirismo</option>
           <option value="Idealismo alemán">Idealismo alemán</option>
@@ -33,22 +37,20 @@
           <option value="Idealismo">Idealismo</option>
           <option value="Escolástica">Escolástica</option>
         </select>
-        <label for="select-sort2">Filtrar por Tradición</label>
-        <select
-          id="select-sort2"
-          data-testid="select-sort2"
-          name="classification"
-        >
+        <label for="select-filter2">Tradición</label>
+        <select id="select-filter2" data-testid="select-filter2" name="classification">
           <option value="">Selecciona una tradición</option>
           <option value="Filosofía analítica">Analítica</option>
           <option value="Filosofía continental">Continental</option>
         </select>
-        <input type="radio" name="sort-order" value="asc" id="sort-asc" />
-        <label for="sort-asc">Más antiguo</label>
-        <input type="radio" name="sort-order" value="desc" id="sort-desc" />
-        <label for="sort-desc">Más reciente</label>
+      <label for="sort-order">Ordenar</label>
+        <select id = "sort-order" data-testid="select-sort" name = "century">
+          <option value = "asc">Más antiguo</option>
+          <option value ="desc">Más reciente</option>
+        </select>
         <button data-testid="button-clear">Limpiar</button>
-      </nav>
+      </aside> 
+    </div>
       <section id="root"></section>
       <button data-testid="show-stats">Mostrar Estadísticas</button>
       <section id="stats"></section>
