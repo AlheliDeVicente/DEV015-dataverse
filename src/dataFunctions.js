@@ -37,8 +37,9 @@ export const sortData = function (data, sortBy, sortOrder) {
   });
   return copiedData;
 };
+
 //función para calcular data
-export const computeStats = function (data) {
+export const womenPhilosophersStats = function (data) {
   const womenPhilosophers = data.reduce((totalWomen, philosopher) => {
     if (philosopher.facts.gender === "Femenino") {
       return totalWomen + 1;
@@ -48,9 +49,32 @@ export const computeStats = function (data) {
   }, 0);
   const percentage = (womenPhilosophers / data.length) * 100;
   return percentage.toFixed(2);
-  /*const philosophersBeforeXIX = data.reduce((totalPhilosophers, philosopher)=>{
-    if(philosopher.facts.century<1900){
-      return totalPhilosophers +1
-    } else { return 0 }
-  }, 0)*/
+};
+export const philosophersBeforeXIXStats = function (data) {
+  const philosophersBeforeXIX = data.reduce(
+    (totalPhilosophers, philosopher) => {
+      if (philosopher.facts.century < 1900) {
+        return totalPhilosophers + 1;
+      } else {
+        return totalPhilosophers;
+      }
+    },
+    0
+  );
+  const percentage = (philosophersBeforeXIX / data.length) * 100;
+  return percentage.toFixed(2);
+};
+export const analyticPhilosopherStats = function (data) {
+  const philosophersBeforeXIX = data.reduce(
+    (totalPhilosophers, philosopher) => {
+      if (philosopher.facts.classification === "Filosofía analítica") {
+        return totalPhilosophers + 1;
+      } else {
+        return totalPhilosophers;
+      }
+    },
+    0
+  );
+  const percentage = (philosophersBeforeXIX / data.length) * 100;
+  return percentage.toFixed(2);
 };
