@@ -49,7 +49,7 @@ h2 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   width: 90%;
 }
 .nombreFilosofo {
@@ -78,7 +78,7 @@ h2 {
   height: 100vh;
   position: fixed; 
   top: 0;
-  right: -300px;
+  left: 0;
   background-color: #A68C76;
   transition: transform 0.5s ease;
   transform: translateX(-100%);
