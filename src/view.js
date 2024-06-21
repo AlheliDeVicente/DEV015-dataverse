@@ -15,8 +15,8 @@ export const renderItems = (data) => {
     <div class = "image-container">
         <img src="${philosophers.imageUrl}" alt="${philosophers.name}" itemprop="image"/>
         </div>
+        <div class = "info">
     <h3 itemprop="givenName"><strong>${philosophers.name}</strong></h3>
-    <div class = "info">
     <p itemprop="description"> ${philosophers.shortDescription}</p>
     <p itemprop="branchOfPhilosophy"><strong>Ramas de la filosofía:</strong> ${philosophers.branchOfPhilosophy.join(", ")}</p>
     <p itemprop="typeOfPhilosophy"><strong>Corrientes:</strong> ${philosophers.typeOfPhilosophy.join(", ")}</p>

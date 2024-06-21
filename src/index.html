@@ -11,8 +11,13 @@
     </header>
     <main>
       <h2>Explora y encuentra a tu filósofo preferido</h2>
-        <input type="checkbox" id="btn-menu">
-        <label for= "btn-menu" id="btn-label">&#9776;</label>
+      <input type="checkbox" id="btn-menu">
+      <div class="search-section">
+        <input type="text" class="nombreFilosofo" id="philosopherName" placeholder="search"/> 
+        <button id="search">buscar</button>
+        <button data-testid="button-clear">Limpiar</button>
+        <label for="btn-menu" id="btn-label">filtros</label>
+      </div>
       <div class="side-menu">
         <label id="close-btn" for="btn-menu">&times;</label>
         <aside class="filters">
@@ -27,7 +32,7 @@
           <option value="Filosofía política">F. Política</option>
           <option value="Teología">Teología</option>
         </select>
-      <label for="selectfilter1">Corriente</label>
+        <label for="selectfilter1">Corriente</label>
         <select id= "selectfilter1" data-testid="select-filter1" name="type">
           <option value="">Selecciona una corriente</option>
           <option value="Empirismo">Empirismo</option>
@@ -48,7 +53,6 @@
           <option value = "asc">Más antiguo</option>
           <option value ="desc">Más reciente</option>
         </select>
-        <button data-testid="button-clear">Limpiar</button>
       </aside> 
     </div>
       <section id="root"></section>

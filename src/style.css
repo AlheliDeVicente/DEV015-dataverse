@@ -45,19 +45,45 @@ h2 {
   font-style: italic;
   color-scheme: (22, 22, 22)
 }
-
+.search-section{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+.nombreFilosofo {
+  width: 200px;
+  height: 15px;
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0); 
+  padding: 5px;
+  font-family: "Lora", serif;
+  border-radius: 50px;
+}
+#search{
+  width: 60px;
+  height: 20px;
+  border-radius: 0%;
+  background-color: #260101;
+  color: rgb(255, 255, 255);
+  margin-left: 20px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+}
 .side-menu {
   width: 250px;
   height: 100vh;
   position: fixed; 
   top: 0;
-  left: 0;
+  right: -300px;
   background-color: #A68C76;
   transition: transform 0.5s ease;
   transform: translateX(-100%);
   z-index: 1;
 }
-
 .filters {
   display: flex;
   flex-flow: column wrap;
@@ -89,7 +115,7 @@ select {
 }
 
 button {
-  width: 40%;
+  width: 70px;
   height: 100%;
   border-radius: 0%;
   background-color: #260101;
@@ -126,11 +152,11 @@ button {
   background-color: #d8d7d3;
   border: solid #A68C76 5px;
   flex-grow: 1;
-  flex-basis: 280px;
-  max-width: 900px;
+  flex-basis: 100px;
+  max-width: 800px;
   min-width: 500px;
-  max-height: 600px;
-  min-height: 600px;
+  max-height: 570px;
+  min-height: 570px;
 }
 
 .image-container {
@@ -145,13 +171,19 @@ button {
 [itemprop="givenName"]{
   display: flex;
   flex-flow: column wrap;
+  line-height: 10px;
+  margin-bottom: 10px;
 }
 .philosophersCard p {
   line-height: 1px;
 }
 .info{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   width: 100%;
-  height: 300px;
+  height: 350px;
   overflow: hidden;
   display: flex;
   flex-flow: column nowrap;
@@ -163,7 +195,7 @@ button {
   flex-flow: column wrap;
   align-items: center;
   justify-content: baseline;
-  height: 190px;
+  height: 1700px;
   width: 100%;
   line-height: 1px;
 }
@@ -171,10 +203,8 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: 5px solid #fffcfc67;
   border-radius: 100px;
 }
-
 #stats {
   font-family: "Silkscreen", sans-serif;
   font-weight: 700;
@@ -211,24 +241,21 @@ input:checked ~.side-menu {
   transform: translateX(0);
 }
 
-input {
+input[type="checkbox"]  {
   display: none;
 }
 
 #btn-label {
-  position: absolute;
   height: 30px;
-  width: 30px;
-  top: 20px;
-  left: 15px;
+  width: 50px;
   text-align: center;
   border-radius: 2px;
   cursor: pointer;
   box-shadow: 0 0 0px rgb(0, 0, 0, 0.3);
   z-index: 1;
-  background-color: #A68C76;
-  color: black;
-  font-size: 24px;
+  background-color: #260101;
+  color: white;
+  font-size: 10px;
   line-height: 30px;
 }
 #close-btn {
