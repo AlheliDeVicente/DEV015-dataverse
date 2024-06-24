@@ -446,7 +446,7 @@ export default [
   {
     id: "jose_medina",
     name: "José Medina",
-    shortDescription: "Filósofo contemporáneo que trabaja en epistemología y justicia social.",
+    shortDescription: "Filósofo contemporáneo, trabaja en epistemología y justicia social.",
     description: "Filósofo y teórico político destacado por su trabajo en teoría de la democracia y justicia social. Es conocido por sus contribuciones a la ética, la filosofía política y la epistemología, explorando temas como la diversidad cultural y la injusticia epistémica. Medina se enfoca en cómo las estructuras sociales influyen en la formación del conocimiento y la identidad de los individuos marginados. Ha abogado por enfoques inclusivos en la educación y la política, desafiando las normas establecidas para promover una sociedad más equitativa y reflexiva.",
     imageUrl: "assets/filosofos/medina.jpg",
     mainWorks: [
