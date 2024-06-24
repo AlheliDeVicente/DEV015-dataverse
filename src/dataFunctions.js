@@ -1,5 +1,11 @@
 //función para filtrar data//
 export const filterData = function (data, filterBy, value) {
+  if(filterBy === "name" && value){
+    const filteredData=data.filter((philosopher)=>{
+      return philosopher.name === value
+    });
+    return filteredData
+  }
   //primer filtro, rama de la filosofía//
   if (filterBy === "branchOfPhilosophy" && value) {
     const filteredData = data.filter((philosopher) => {

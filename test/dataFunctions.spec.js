@@ -1,4 +1,4 @@
-import { analyticPhilosopherStats, filterData, womenPhilosophersStats, philosophersBeforeXIXStats } from "../src/dataFunctions.js";
+import { analyticPhilosopherStats, filterData, womenPhilosophersStats, philosophersBeforeXIXStats, sortData } from "../src/dataFunctions.js";
 import { data as fakeData } from "./data.js";
 
 describe("filterData function", () => {
@@ -11,14 +11,12 @@ describe("filterData function", () => {
     expect(result.length).toBe(1);
   });
 });
-
 it("should filter philosophers by branchOfPhilosopher and returns the quantity of them", () => {
   const result = filterData(
     fakeData,
     "branchOfPhilosophy",
     "Existencialismo"
-  );
-  expect(result.length).toBe(1);
+  ); expect(result.length).toBe(1);
 });
 it("should filter philosophers by branchOfPhilosopher and returns the quantity of them", () => {
   const result = filterData(fakeData, "branchOfPhilosophy", "Ética");
@@ -57,5 +55,21 @@ describe("philosophersBeforeXIXStats function", ()=>{
   it("should return the quantity of philosophers born before 1800",()=>{
     const result = Number(philosophersBeforeXIXStats(fakeData))
     expect(result).toBe(87.50)
+  })
+})
+describe("sortData function",()=>{
+  it("should return the philosophers sorted in asc order according to their century", ()=>{
+    const result = sortData(fakeData, "century", "asc")
+    for(let i=0; i<fakeData.length-1; i++){
+      expect(result[i].facts.century<=result[i+1].facts.century).toBe(true)
+    }
+  })
+})
+describe("sortData function",()=>{
+  it("should return the philosophers sorted in asc order according to their century", ()=>{
+    const result = sortData(fakeData, "century", "desc")
+    for(let i=0; i<result.length-1; i++){
+      expect(result[i].facts.century>=result[i+1].facts.century).toBe(true)
+    }
   })
 })
