@@ -103,6 +103,7 @@ label {
 }
 
 select {
+  cursor: pointer;
   width: 50%;
   height: 40%;
   background-color: #d9bba9e1;
@@ -115,6 +116,7 @@ select {
 }
 
 button {
+  cursor: pointer;
   width: 70px;
   height: 100%;
   border-radius: 0%;
@@ -267,4 +269,18 @@ input[type="checkbox"]  {
   border: none;
   padding: 0.5em;
   margin-bottom: 1em;
+}
+#statsButton{
+  cursor: pointer;
+  width: 30%;
+  height: 100%;
+  border-radius: 0%;
+  background-color: #260101;
+  color: rgb(255, 255, 255);
+  margin-left: 20px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+  margin-top: 25px;  
 }

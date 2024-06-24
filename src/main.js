@@ -28,6 +28,19 @@ searchButton.addEventListener("click",()=>{
   const ulElement=renderItems(filteredData)
   rootElement.appendChild(ulElement)
 })
+/*
+//para que la barra de busqueda funcione con enter
+searchButton.addEventListener("keypress", (event)=>{
+  if(event.key === "Enter"){
+    searchButton.addEventListener("click", ()=>{
+      const nameSelected = searchName.value
+      filteredData = filterData(data, "name", nameSelected)
+      rootElement.innerHTML=""
+      const ulElement=renderItems(filteredData)
+      rootElement.appendChild(ulElement)
+    })
+  }
+})*/
 //función de filtrado por rama//
 branchSelector.addEventListener("change", () => {
   //evento change registra cambios en la selección//
