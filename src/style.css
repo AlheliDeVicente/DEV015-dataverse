@@ -61,18 +61,7 @@ h2 {
   font-family: "Lora", serif;
   border-radius: 50px;
 }
-#search{
-  width: 60px;
-  height: 20px;
-  border-radius: 0%;
-  background-color: #260101;
-  color: rgb(255, 255, 255);
-  margin-left: 20px;
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: bold;
-}
+
 .side-menu {
   width: 250px;
   height: 100vh;
@@ -118,7 +107,7 @@ select {
 button {
   cursor: pointer;
   width: 70px;
-  height: 100%;
+  height: 30px;
   border-radius: 0%;
   background-color: #260101;
   color: rgb(255, 255, 255);
@@ -145,7 +134,7 @@ button {
 .philosophersCard {
   display: flex;
   align-items: center;
-  justify-content: baseline;
+  justify-content: space-evenly;
   flex-flow: column wrap;
   font-family: "Lora", serif;
   font-optical-sizing: auto;
@@ -162,45 +151,38 @@ button {
 }
 
 .image-container {
-  margin-top: 10px;
-  width: 40%;
-  height: 200px;
+  padding: 2%;
+  width: 35%;
+  height: 35%;
   overflow: hidden;
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
 [itemprop="givenName"]{
   display: flex;
   flex-flow: column wrap;
-  line-height: 10px;
-  margin-bottom: 10px;
+  align-items: center;
 }
 .philosophersCard p {
   line-height: 1px;
 }
 .info{
+  margin-left: 3%;
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   width: 100%;
-  height: 350px;
+  height: 100%;
   overflow: hidden;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: baseline;
-}
-[itemprop="mainWorks"]{
-  display: flex;
   flex-flow: column wrap;
-  align-items: center;
-  justify-content: baseline;
-  height: 1700px;
-  width: 100%;
-  line-height: 1px;
+  align-items: flex-start;
+  justify-content: space-between;
 }
+
 .image-container img {
   width: 100%;
   height: 100%;
@@ -215,7 +197,8 @@ button {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #d8d7d32a;
+  background-color: #d8d7d3;
+  width: 100%;
 }
 
 tr {
@@ -223,6 +206,8 @@ tr {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  background-color: #d8d7d3;
+  width: 100%;
 }
 
 footer {
@@ -253,11 +238,11 @@ input[type="checkbox"]  {
   text-align: center;
   border-radius: 2px;
   cursor: pointer;
-  box-shadow: 0 0 0px rgb(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px 1px  rgb(0, 0, 0, 0.3);
   z-index: 1;
   background-color: #260101;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 30px;
 }
 #close-btn {
@@ -274,7 +259,6 @@ input[type="checkbox"]  {
   cursor: pointer;
   width: 30%;
   height: 100%;
-  border-radius: 0%;
   background-color: #260101;
   color: rgb(255, 255, 255);
   margin-left: 20px;
