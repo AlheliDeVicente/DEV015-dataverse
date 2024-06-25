@@ -37,7 +37,6 @@ header {
   border-top: 2px solid #8C342B;
   border-bottom: 2px solid #8C342B;
 }
-
 h2 {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
@@ -61,26 +60,24 @@ h2 {
   font-family: "Lora", serif;
   border-radius: 50px;
 }
-
 .side-menu {
   width: 250px;
   height: 100vh;
   position: fixed; 
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #A68C76;
   transition: transform 0.5s ease;
-  transform: translateX(-100%);
-  z-index: 1;
+  transform: translateX(100%);
+  z-index: 2;
+  box-shadow: black 10px 10px 10px 10px;
 }
 .filters {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: center;
-  z-index: 2;
+  justify-content: baseline
 }
-
 label {
   position: center;
   font-family: "Lora", serif;
@@ -90,7 +87,6 @@ label {
   margin-left: 15px;
   margin-top: 25px;
 }
-
 select {
   cursor: pointer;
   width: 50%;
@@ -103,7 +99,6 @@ select {
   font-style: normal;
   margin-left: 5px;
 }
-
 button {
   cursor: pointer;
   width: 70px;
@@ -118,7 +113,6 @@ button {
   font-style: bold;
   margin-top: 25px;
 }
-
 .philosophersList {
   width: 90%;
   margin: 60px 0;
@@ -130,12 +124,11 @@ button {
   gap: 3.5em;
   flex-flow: row wrap;
 }
-
 .philosophersCard {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  flex-flow: column wrap;
+  justify-content:baseline;
+  flex-flow: column nowrap;
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -145,31 +138,23 @@ button {
   flex-grow: 1;
   flex-basis: 100px;
   max-width: 800px;
-  min-width: 500px;
+  min-width: 510px;
   max-height: 570px;
   min-height: 570px;
 }
-
 .image-container {
-  padding: 2%;
+  padding:2%;
   width: 35%;
-  height: 35%;
-  overflow: hidden;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
+  height: 40%;
 }
 [itemprop="givenName"]{
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
+  position: center;
 }
 .philosophersCard p {
   line-height: 1px;
 }
 .info{
-  margin-left: 3%;
+  margin-left: 2%;
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -180,7 +165,7 @@ button {
   display: flex;
   flex-flow: column wrap;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .image-container img {
@@ -225,7 +210,7 @@ footer {
 }
 
 input:checked ~.side-menu {
-  transform: translateX(0);
+  transform: translateX(0%);
 }
 
 input[type="checkbox"]  {
