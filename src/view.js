@@ -29,7 +29,8 @@ export const renderItems = (data) => {
     .map((work) =>
       `<p> <i>  ${work.title} </i> —  ${work.year}</p>`).join(" ")} 
     </div>
-    </div>`;
+    </div>
+    `;
     //agregar tarjeta al ul//
     ul.appendChild(card);
   });
