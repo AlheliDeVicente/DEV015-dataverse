@@ -2,6 +2,7 @@ export const renderItems = (data) => {
   //crear ul en donde se pondrán las li//
   const ul = document.createElement("ul");
   ul.setAttribute("class", "philosophersList")
+  ul.setAttribute("style", "padding-right:40px")
   //método forEach para crear un li para cada objeto del array//
   data.forEach(function (philosophers) {
     const card = document.createElement("li");

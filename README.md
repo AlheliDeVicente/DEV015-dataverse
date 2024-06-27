@@ -2,78 +2,27 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Consideraciones generales](#3-consideraciones-generales)
-* [4. Funcionalidades](#4-funcionalidades)
-* [5. Consideraciones técnicas](#5-consideraciones-técnicas)
-* [6. Hitos](#6-hitos)
-* [7. Criterios de aceptación mínimos del proyecto](#7-criterios-de-aceptación-mínimos-del-proyecto)
-* [8. Hacker edition](#8-hacker-edition)
-* [9. Objetivos de aprendizaje](#9-objetivos-de-aprendizaje)
-* [10. Pistas, tips y lecturas complementarias](#10-pistas-tips-y-lecturas-complementarias)
-* [11. Consideraciones para pedir tu Project Feedback](#11-consideraciones-para-pedir-tu-project-feedback)
-
+* [1. Definición del Producto](#1-definicion-del-producto)
+* [2. Funcionalidades](#2-funcionalidades)
+* [3. Prompting y uso de IA](#3-prompt)
+* [4. Historias de Usuario](#4-historias-de-usuario)
+* [5. Prototipos de Alta Fidelidad](#65prototipos)
 ***
 
-## 1. Preámbulo
+## 1. Definición del Producto
+*Take a Philosophic Dive* es una página web desarrollada en los lenguajes `HTML`, `Java Script` y `CSS`, cuyo principal objetivo es brindar a los usuarios un primer acercamiento a la filosofía. Se alberga en tarjetas la principal información de 24 de los filósofos más importantes a lo largo de la historia, desde Platón hasta Judith Butler. Así, las usuarias saber cuáles son las principales ramas que fueron trabajados por estos pensadores, las corrientes a las que pertenecían y las obras que marcaron su pensamiento. 
+Del mismo modo, se cuenta con una parte de estadísticas, en donde los usuarios podrán encontrar datos de interés sobre los filósofos enlistados.
+La página web está diseñada para que pueda ser consultada en diversos dispositivos, desde telefonos hasta pantallas de escritorio. Con una estructura amigable a los usuarios que les permite buscar el nombre de un pensador en especifico y filtrar de acuerdo al campo que deseen saber más.
+*Take a Philosophic Dive* es un intento por seguir abonando a la difusión y divulgación de la filosofía, disciplina que nos atañe a todos y de la cual siempre se puede seguir aprendiendo.
+Anímate a tomar __un clavado filosófico__
+## 3. Funcionalidades:
+Las principales funcionalidades de la página son: La visualización de los datos a modos de tarjeta, el filtrado y ordenado de la data y el cálculo de algunas estadísticas.
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
-
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-las usuarias, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por las
-usuarias, al lado derecho.
-
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
-
-## 2. Resumen del proyecto
-
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que vas a generar con [prompting](https://www.itmadrid.com/que-es-un-prompt-en-inteligencia-artificial-ia/).
-Esta página web se adecuará a lo que descubras que tu usuaria
-necesita.
-
-Además, en este proyecto utilizarás herramientas de
-[inteligencia artificial](https://es.wikipedia.org/wiki/Inteligencia_artificial)
-como [ChatGPT](https://openai.com/chatgpt), [ExplainDev](https://explain.dev/),
-entre otras para generar un set de datos en un archivo javascript.
-
-El propósito de generar los datos en esta manera es brindarte la oportunidad de
-adentrarte en el empleo de herramientas impulsadas por la inteligencia
-artificial, así como en [técnicas de prompting](https://learnprompting.org/es/docs/intro).
-
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y calcular alguna estadística**. Con estadística
-nos referimos a distintos cálculos que puedes hacer con los datos para mostrar
-información aún más relevante a las usuarias (promedio, el valor máximo
-o mínimo, etc).
-
-## 3. Consideraciones generales
-
-* Este proyecto se debe resolver en duplas.
-* El rango de tiempo estimado para completar el proyecto es de 4 a 5 Sprints.
-* El tiempo estimado que deberías dedicar a la [generación de los datos](#generar-los-datos)
-  es de máximo un sprint. Además, al final del proyecto deberás presentar
-  un [screenshot del prompt utilizado](#prompt-utilizado).
-* Si ves que te va a tomar más tiempo,
-  deberás utilizar los datos de ejemplo que los vas a encontrar en
-  esta ruta: `./src/data/dataset.js`.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
+-Visualización
 
 ## 4. Funcionalidades
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y calcular alguna estadística**.
-
+Como entregable final tendrás una página web que permita 
 Aquí definimos en más detalle las funcionalidades mínimas que debe
 tener:
 
