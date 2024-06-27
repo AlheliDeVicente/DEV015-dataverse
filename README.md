@@ -29,8 +29,37 @@ Las principales funcionalidades de la página son: La visualización de los dato
 ## 3. Prompting:
 La generación de los datos se realizo mediante la herramienta de Inteligencia Artifical `ChatGPT`de OpenAI. Mediante un prompt específico se le pidio que generara un array de 24 objetos con los `KeyElements`: id, shortDescription, description, facts, name, entre otros.
 A continuación se deja el prompt utilizado:
-[prompt](src/assets/prompt.png) [prompt1](src/assets/prompt1.png)
-## 4. Historias de Usuario:
+![prompt](src/assets/prompt1.png) ![prompt](src/assets/prompt.png)
 
+## 4. Historias de Usuario:
+Se crearon diversas historias de usuario para el diseño y programación de la página.
+**Card:**Como persona que tiene un primer acercamiento en la filosofia 
+quiero saber el nombre de algunos de los filosofos mas importantes de la historia,
+para familiarizarme con ellos
+**Criteria:** La página debe mostrar una lista de al menos 24 filósofos reconocidos.
+Cada filósofo debe estar acompañado de una breve biografía.
+Debe haber una imagen representativa de cada filósofo.
+
+**Card:**Como estudiante, quiero saber algunos de los trabajos más importantes de esos filósofos, para poder buscarlos después.
+**Criteria**Se deben enumerar al menos tres obras importantes de cada filosofo
+Cada obra debe tener al menos el año en que se creó, el título y el tema tratado en ella.
+-Opcional (poder poner links a esas obras/pdfs)
+
+**Card:** Como estudiante, quiero saber qué filosofos trabajaron temas relacionados a x rama, pues necesito hacer una investigación sobre ese tema
+**Criteria:** -La información de los filosofos debe tener las ramas a las que se dedicaron.
+-Debe haber un botón de filtrado que permita filtrar por rama de la filosofia y muestre todos los filosofos que se dedicaron a ello.
+
+**Card:** Como estudiante, quiero saber qué filosofos pertenecieron a x corriente, pues estoy interesandome en saber más sobre ésta
+**Criteria:** Función de filtrado que permita conocer qué filosofos se dedicaron a x corriente
+La información de los filosofos debe destacar esta información
+
+**Card:** Como profesional de la filosofia quiero saber cuántos filosofos son de la rama continental, pues quiero conocer más sobre esa corriente 
+Como usuaria primeriza, quiero saber cuántas mujeres filosofas hay y cuáles fueron sus principales intereses
+**Criteria:** Funciones de calculo que permitan saber más sobre esta información y que muestre gráficas.
+
+**Card:** Como usuaria de la página, quiero que los filtros se encuentren en una sección donde sea facil distinguirlos y en donde no tomen demasiado espacio para no hacer mucho scroll
+**Criteria:** Realizar un menu lateral desplegable en donde se almacenen los filtros
 
 ## 5. Prototipos de alta fidelidad:
+Con base en las Historias de usuario anteriormente descritas se crearon dos prototipos de alta fidelidad, los cuales sirvieron como guía para la creación de la página web, aunque se realizaron algunas modificaciones sobre estos al momento de realizar el diseño final, principalmente en la cuestión de colores. No obstante, el acomodo de los elementos y visualización de datos siguio esta estructura.
+![desktop](src/assets/desktop.png) ![mobile](src/assets/mobile.png)
