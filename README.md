@@ -33,6 +33,7 @@ A continuación se deja el prompt utilizado:
 
 ## 4. Historias de Usuario:
 Se crearon diversas historias de usuario para el diseño y programación de la página.
+
 **Card:**Como persona que tiene un primer acercamiento en la filosofia 
 quiero saber el nombre de algunos de los filosofos mas importantes de la historia,
 para familiarizarme con ellos
