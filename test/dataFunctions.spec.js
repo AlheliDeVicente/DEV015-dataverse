@@ -1,75 +1,66 @@
-import { analyticPhilosopherStats, filterData, womenPhilosophersStats, philosophersBeforeXIXStats, sortData } from "../src/dataFunctions.js";
+import {filterData, sortData, womenPhilosophersStats, philosophersBeforeXIXStats, analyticPhilosopherStats} from "../src/dataFunctions.js";
 import { data as fakeData } from "./data.js";
-
-describe("filterData function", () => {
-  it("should filter philosophers by branchOfPhilosopher and returns the quantity of them", () => {
-    const result = filterData(
-      fakeData,
-      "branchOfPhilosophy",
-      "Teología"
-    );
-    expect(result.length).toBe(1);
+describe('filterData function', () => {
+  it('should return the quantity of philosophersByClassification', () => {
+    const analitics = filterData(fakeData, "classification", "Filosofía analítica")
+    const continentals = filterData(fakeData, "classification", "Filosofía continental")
+    expect(analitics.length).toBe(2);
+    expect (continentals.length).toBe(10);
+  });
+  it("should return the id of the teology philosophers", ()=>{
+    const teology = filterData(fakeData, "branchOfPhilosophy", "Teología")
+    expect(teology.length).toBe(1)
+  });
+  it("should return the quantity of epistemology philosophers", ()=>{
+    const epistemology = filterData(fakeData, "branchOfPhilosophy", "Epistemología")
+    expect(epistemology.length).toBe(4)
+  });
+  it("should return the id of ethics philosophers", ()=>{
+    const ethics = filterData(fakeData,"branchOfPhilsophy", "Ética")
+    expect(ethics.id).toEqual["platon", "david_hume","immanuel_kant", "baruch_spinoza", "epicuro"]
+  });
+  it("should return the name of the metaphysics philosophers", ()=>{
+    const metaphysics = filterData(fakeData, "branchOfPhilosophy", "Metafísica")
+    expect(metaphysics.name).toEqual["Platón", "Averroes", "Parménides", "Giordano Bruno", "Baruch Spinoza"]
+  });
+  it("should return the full info of the philosopher with the name selected", ()=>{
+    const platon = filterData(fakeData, "name", "Platón")
+    expect(platon[0].name).toBe("Platón")
+  });
+  it("should return the total of philosophers by type",()=>{
+    const existencialismo = filterData(fakeData, "typeOfPhilosophy", "Existencialismo");
+    const escolastica = filterData(fakeData, "typeOfPhilosophy", "Escolástica");
+    const idealismoAleman = filterData(fakeData, "typeOfPhilosophy","Idealismo alemán");
+    const idealismo = filterData(fakeData, "typeOfPhilosophy", "Idealismo");
+    const empirismo = filterData(fakeData, "typeOfPhilosophy", "Empirismo");
+    expect(existencialismo.length).toBe(1);
+    expect(escolastica.length).toBe(1);
+    expect(idealismo.length).toBe(1);
+    expect(idealismoAleman.length).toBe(1);
+    expect(empirismo.length).toBe(1);
   });
 });
-it("should filter philosophers by branchOfPhilosopher and returns the quantity of them", () => {
-  const result = filterData(
-    fakeData,
-    "branchOfPhilosophy",
-    "Existencialismo"
-  ); expect(result.length).toBe(1);
-});
-it("should filter philosophers by branchOfPhilosopher and returns the quantity of them", () => {
-  const result = filterData(fakeData, "branchOfPhilosophy", "Ética");
-  expect(result.length).toBe(8);
-});
-it("should filter philosophers by branchOfPhilosopher and returns the quantity of them", () => {
-  const result = filterData(
-    fakeData,
-    "branchOfPhilosophy",
-    "Epistemología"
-  );
-  expect(result.length).toBe(5);
-});
-it("should filters philosophers by classification and returns the quantity of them", () => {
-  const result = filterData(
-    fakeData,
-    "classification",
-    "Filosofía analítica"
-  );
-  expect(result.length).toBe(2);
-});
-describe("womenStats function", ()=>{
-  it("should return the quantity of women philosophers", ()=>{
-    const result = Number(womenPhilosophersStats(fakeData))
-    ;
-    expect(result).toBe(8.33)
-  })
-})
-describe("analyticPhilosophers function", ()=>{
-  it("should return the quantity of analytic philosophers", ()=>{
-    const result = Number(analyticPhilosopherStats(fakeData))
-    expect(result).toBe(16.67)
-  })
-})
-describe("philosophersBeforeXIXStats function", ()=>{
-  it("should return the quantity of philosophers born before 1800",()=>{
-    const result = Number(philosophersBeforeXIXStats(fakeData))
-    expect(result).toBe(87.50)
-  })
-})
-describe("sortData function",()=>{
-  it("should return the philosophers sorted in asc order according to their century", ()=>{
-    const result = sortData(fakeData, "century", "asc")
-    for(let i=0; i<fakeData.length-1; i++){
-      expect(result[i].facts.century<=result[i+1].facts.century).toBe(true)
+describe("sortData function", ()=>{
+  it("should return the array sorted asc by century", ()=>{
+    const asc = sortData(fakeData, "century", "asc")
+    for(let i=0;i<fakeData.length-1;i++){
+      expect(asc[i].facts.century<=asc[i+1].facts.century).toBe(true)
     }
-  })
-})
-describe("sortData function",()=>{
-  it("should return the philosophers sorted in asc order according to their century", ()=>{
-    const result = sortData(fakeData, "century", "desc")
-    for(let i=0; i<result.length-1; i++){
-      expect(result[i].facts.century>=result[i+1].facts.century).toBe(true)
+  });
+  it("should return the array sorted desc by century", ()=>{
+    const desc = sortData(fakeData, "century", "desc")
+    for(let i=0; i<fakeData.length-1;i++){
+      expect(desc[i].facts.century>desc[i+1].facts.century).toBe(true)
     }
+  });
+});
+describe("computeStats function", ()=>{
+  it("should return all stats", ()=>{
+    const womenPhilosophers = Number(womenPhilosophersStats(fakeData))
+    const philosophersBeforeXIX = Number(philosophersBeforeXIXStats(fakeData))
+    const analyticPhilosophers = Number(analyticPhilosopherStats(fakeData))
+    expect(womenPhilosophers).toBe(8.33)
+    expect(philosophersBeforeXIX).toBe(83.33)
+    expect(analyticPhilosophers).toBe(16.67)
   })
 })

@@ -99,23 +99,23 @@ export const data = [
     }
   },
   {
-    id: "immanuel_kant",
-    name: "Immanuel Kant",
-    shortDescription: "Filósofo alemán, figura central de la filosofía moderna.",
-    description: "Fue un filósofo alemán influyente en la Ilustración y más allá. Es conocido por su obra central 'Crítica de la razón pura', donde desarrolla la teoría del conocimiento y la epistemología. Kant buscaba establecer los límites del conocimiento humano y argumentó que ciertos principios son innatos y universales. Además, propuso la ética deontológica en 'Fundamentación de la metafísica de las costumbres', enfocándose en el deber y la moralidad intrínseca. Su pensamiento revolucionó la filosofía moderna al integrar la razón y la ética con un enfoque crítico sistemático que ha perdurado como referencia fundamental en el pensamiento occidental.",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/79/Immanuel_Kant_-_Gemaelde_1.jpg",
+    id: "averroes",
+    name: "Averroes",
+    shortDescription: "Filósofo y médico musulmán medieval.",
+    description: "también conocido como Ibn Rushd, fue un filósofo, jurista y médico andalusí nacido en Córdoba en 1126. Es famoso por sus comentarios sobre Aristóteles y su intento de reconciliar la filosofía griega con el pensamiento islámico. Averroes defendió la autonomía de la razón y la importancia de la filosofía para comprender la verdad. Su interpretación de Aristóteles, conocida como 'averroísmo', tuvo un impacto profundo en el pensamiento europeo medieval y renacentista. Fue una figura clave en la traducción y transmisión del conocimiento clásico griego al mundo árabe y europeo, influenciando así el desarrollo de la filosofía y la ciencia.",
+    imageUrl: "assets/filosofos/averroes.jpg",
     mainWorks: [
-      { title: "Crítica de la razón pura", year: 1781 },
-      { title: "Crítica de la razón práctica", year: 1788 },
-      { title: "Crítica del juicio", year: 1790 }
+      { title: "Comentarios sobre Aristóteles", year: 1190 },
+      { title: "Tahafut al-Tahafut", year: 1180 },
+      { title: "Al-Kulliyat", year: 1162 }
     ],
-    branchOfPhilosophy: ["Epistemología", "Ética"],
-    typeOfPhilosophy: ["Idealismo alemán"],
+    branchOfPhilosophy: ["Metafísica", "Filosofía de la ciencia"],
+    typeOfPhilosophy: ["Aristotelismo"],
     facts: {
-      century: 1724,
+      century: 1126,
       classification: "Filosofía continental",
       gender: "Masculino",
-      extraInfo: "Su filosofía crítica intentó sintetizar el racionalismo y el empirismo."
+      extraInfo: "Sus trabajos fueron traducidos al latín e influyeron en la escolástica europea."
     }
   },
   {

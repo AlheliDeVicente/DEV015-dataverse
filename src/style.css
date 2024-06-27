@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Playwrite+MX&family=Playwrite+US+Trad&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Playwrite+MX&family=Playwrite+US+Trad&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Silkscreen&display=swap');
+body{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
 body::before {
   background-image: url("assets/image.jpg");
   background-repeat: no-repeat;
@@ -22,17 +27,12 @@ main{
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: center;
 }
 header {
   font-family: "Playwrite MX", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  padding: .5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: (22, 22, 22);
   border-top: 2px solid #8C342B;
   border-bottom: 2px solid #8C342B;
@@ -47,13 +47,25 @@ h2 {
 .search-section{
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: baseline;
-  width: 90%;
+  align-items: flex-end;
+}
+button {
+  box-shadow: 3px 3px 3px black;
+  cursor: pointer;
+  width: 70px;
+  height: 30px;
+  background-color: #260101;
+  color: rgb(255, 255, 255);
+  margin-left: 20px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+  margin-top: 25px;
 }
 .nombreFilosofo {
-  width: 200px;
-  height: 15px;
+  width: 300px;
+  height: 30px;
   background-color: white;
   border: 1px solid rgb(0, 0, 0); 
   padding: 5px;
@@ -70,21 +82,18 @@ h2 {
   transition: transform 0.5s ease;
   transform: translateX(100%);
   z-index: 2;
-  box-shadow: black 10px 10px 10px 10px;
+  box-shadow: 10px 10px 10px black;
 }
 .filters {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: baseline
 }
 label {
-  position: center;
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: bold;
-  margin-left: 15px;
   margin-top: 25px;
 }
 select {
@@ -99,59 +108,30 @@ select {
   font-style: normal;
   margin-left: 5px;
 }
-button {
-  cursor: pointer;
-  width: 70px;
-  height: 30px;
-  border-radius: 0%;
-  background-color: #260101;
-  color: rgb(255, 255, 255);
-  margin-left: 20px;
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: bold;
-  margin-top: 25px;
-}
 .philosophersList {
-  width: 90%;
   margin: 60px 0;
-  max-width: 1200px;
-  min-height: 100vh;
   display: flex;
-  align-items: baseline;
   justify-content: space-evenly;
-  gap: 3.5em;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
 }
 .philosophersCard {
+  padding: 1%;
+  margin: 1%;
   display: flex;
   align-items: center;
-  justify-content:baseline;
-  flex-flow: column nowrap;
+  justify-content: baseline;
+  flex-flow: row nowrap;
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   background-color: #d8d7d3;
   border: solid #A68C76 5px;
+  width: 45%;
   flex-grow: 1;
-  flex-basis: 100px;
-  max-width: 800px;
-  min-width: 510px;
-  max-height: 570px;
-  min-height: 570px;
 }
 .image-container {
   padding:2%;
-  width: 35%;
-  height: 40%;
-}
-[itemprop="givenName"]{
-  position: center;
-}
-.philosophersCard p {
-  line-height: 1px;
 }
 .info{
   margin-left: 2%;
@@ -161,31 +141,25 @@ button {
   font-style: normal;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: flex-start;
-  justify-content: space-evenly;
 }
-
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 100px;
 }
-#stats {
+#stats{
+  margin-bottom: 2%;
   font-family: "Silkscreen", sans-serif;
   font-weight: 700;
   font-style: normal;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  background-color: #d8d7d3;
+  background-color: #d8d7d360;
   width: 100%;
 }
-
 tr {
   display: flex;
   flex-flow: row wrap;
@@ -194,7 +168,6 @@ tr {
   background-color: #d8d7d3;
   width: 100%;
 }
-
 footer {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
@@ -218,12 +191,13 @@ input[type="checkbox"]  {
 }
 
 #btn-label {
+  box-shadow: 4px 4px 4px black;
+  margin-left: 15px;
   height: 30px;
   width: 50px;
   text-align: center;
   border-radius: 2px;
   cursor: pointer;
-  box-shadow: 2px 2px 2px 1px  rgb(0, 0, 0, 0.3);
   z-index: 1;
   background-color: #260101;
   color: white;
@@ -241,6 +215,8 @@ input[type="checkbox"]  {
   margin-bottom: 1em;
 }
 #statsButton{
+  box-shadow: 3px 3px 3px black;
+  margin-bottom: 2%;
   cursor: pointer;
   width: 30%;
   height: 100%;
