@@ -9,14 +9,14 @@
 * [5. Prototipos de Alta Fidelidad](#65prototipos)
 ***
 
-## 1. Definición del Producto
+## 1. 📚 Definición del Producto
 *Take a Philosophic Dive* es una página web desarrollada en los lenguajes `HTML`, `Java Script` y `CSS`, cuyo principal objetivo es brindar a los usuarios un primer acercamiento a la filosofía. Se alberga en tarjetas la principal información de 24 de los filósofos más importantes a lo largo de la historia, desde Platón hasta Judith Butler. Así, las usuarias saber cuáles son las principales ramas que fueron trabajados por estos pensadores, las corrientes a las que pertenecían y las obras que marcaron su pensamiento. Del mismo modo, se cuenta con una parte de estadísticas, en donde los usuarios podrán encontrar datos de interés sobre los filósofos enlistados.
 
 La página web está diseñada para que pueda ser consultada en diversos dispositivos, desde telefonos hasta pantallas de escritorio. Con una estructura amigable a los usuarios que les permite buscar el nombre de un pensador en especifico y filtrar de acuerdo al campo que deseen saber más.
 *Take a Philosophic Dive* es un intento por seguir abonando a la difusión y divulgación de la filosofía, disciplina que nos atañe a todos y de la cual siempre se puede seguir aprendiendo.
-Anímate a tomar __un clavado filosófico__
+Anímate a tomar __un clavado filosófico__ 🚀
 
-## 2. Funcionalidades:
+## 2. 🔧 Funcionalidades:
 Las principales funcionalidades de la página son: La visualización de los datos a modos de tarjeta, el filtrado y ordenado de la data y el cálculo de algunas estadísticas.
 
 - __Visualización__: Se crearon tarjetas cuyos elementos cuentan con las propiedades de `microdatos` como `itemscope` `itemtype` e `itemprop`.  
@@ -39,7 +39,7 @@ Se crearon diversas historias de usuario para el diseño y programación de la p
 Cada filósofo debe estar acompañado de una breve biografía.
 Debe haber una imagen representativa de cada filósofo.
 
-**Card:**Como estudiante, quiero saber algunos de los trabajos más importantes de esos filósofos, para poder buscarlos después.
+**Card:** Como estudiante, quiero saber algunos de los trabajos más importantes de esos filósofos, para poder buscarlos después.
 **Criteria**Se deben enumerar al menos tres obras importantes de cada filosofo
 Cada obra debe tener al menos el año en que se creó, el título y el tema tratado en ella.
 -Opcional (poder poner links a esas obras/pdfs)
@@ -59,6 +59,8 @@ Como usuaria primeriza, quiero saber cuántas mujeres filosofas hay y cuáles fu
 **Card:** Como usuaria de la página, quiero que los filtros se encuentren en una sección donde sea facil distinguirlos y en donde no tomen demasiado espacio para no hacer mucho scroll
 **Criteria:** Realizar un menu lateral desplegable en donde se almacenen los filtros
 
-## 5. Prototipos de alta fidelidad:
+## 5. 🖼️ Prototipos de alta fidelidad:
 Con base en las Historias de usuario anteriormente descritas se crearon dos prototipos de alta fidelidad, los cuales sirvieron como guía para la creación de la página web, aunque se realizaron algunas modificaciones sobre estos al momento de realizar el diseño final, principalmente en la cuestión de colores. No obstante, el acomodo de los elementos y visualización de datos siguio esta estructura.
 ![desktop](src/assets/desktop.png) ![mobile](src/assets/mobile.png)
+
+Coded by Alhelí De Vicente García❤️
