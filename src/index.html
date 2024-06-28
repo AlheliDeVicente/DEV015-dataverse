@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Dataverse</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <header>
@@ -14,7 +15,7 @@
       <input type="checkbox" id="btn-menu">
       <div class="search-section">
         <input type="text" class="nombreFilosofo" id="philosopherName" placeholder="search"/> 
-        <button id="search">buscar</button>
+        <button id="search">&#128269;</button>
         <button data-testid="button-clear">Limpiar</button>
         <label for="btn-menu" id="btn-label">filtros</label>
       </div>
@@ -56,13 +57,13 @@
       </aside> 
     </div>
       <section id="root"></section>
-      <section id="stats">
       <button data-testid="show-stats" id="statsButton">Datos de interés</button>
+      <section id="stats">
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <table class="columns">
         <tr>
-          <td><div id="gender_chart_div" style="border: 1px solid #ccc"></div></td>
-          <td><div id="class_chart_div" style="border: 1px solid #ccc"></div></td>
+          <td><div id="gender_chart_div"></div></td>
+          <td><div id="class_chart_div"></div></td>
         </tr>
       </table>
     </section>
