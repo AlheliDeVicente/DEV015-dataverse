@@ -98,8 +98,9 @@ statsButton.addEventListener("click", () => {
   statsParagraphs.innerHTML = `<p> Hay un promedio de ${womenPhilosophers} mujeres filosofas</p>  
   <p> Alrededor de ${philosophersBeforeXIX}% de los filósofos son anteriores al siglo XIX</p>
   <p> Hay un promedio de ${analyticPhilosopher} filósofos analítcos `;
-  statsSection.appendChild(statsParagraphs); // Añadir el p al cuerpo del documento
-  google.charts.load('current', {'packages':['corechart']});
+  statsSection.appendChild(statsParagraphs); // Añadir el p al cuerpo del documento//
+  
+  google.charts.load('current', {'packages':['corechart']});//crear gráficos//
   google.charts.setOnLoadCallback(drawGenderChart);
   google.charts.setOnLoadCallback(drawClassificationChart);
 });
@@ -115,7 +116,7 @@ function drawGenderChart() {
   var options = {
     title: 'Filósofos por género',
     is3D: true,
-    width: 400,
+    width: 300,
     height: 240,
     backgroundColor: 'transparent',
     colors: ["#8C342B", "#59352D", "#854738", "#D98E73", "#D9BBA9", "#B56449"]
@@ -134,7 +135,7 @@ function drawClassificationChart() {
   var options = {
     title: 'Filósofos por tradición',
     is3D: true,
-    width: 400,
+    width: 300,
     height: 240,
     backgroundColor: 'transparent',
     colors: ["#8C342B", "#59352D", "#854738", "#D98E73", "#D9BBA9", "#B56449"]

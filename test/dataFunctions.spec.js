@@ -23,7 +23,7 @@ describe('filterData function', () => {
     const metaphysics = filterData(fakeData, "branchOfPhilosophy", "Metafísica")
     expect(metaphysics.name).toEqual["Platón", "Averroes", "Parménides", "Giordano Bruno", "Baruch Spinoza"]
   });
-  it("should return the full info of the philosopher with the name selected", ()=>{
+  it("should return philosopher with the name selected", ()=>{
     const platon = filterData(fakeData, "name", "Platón")
     expect(platon[0].name).toBe("Platón")
   });
