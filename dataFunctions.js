@@ -56,6 +56,7 @@ export const womenPhilosophersStats = function (data) {
   const percentage = (womenPhilosophers / data.length) * 100;
   return percentage.toFixed(2);
 };
+
 export const philosophersBeforeXIXStats = function (data) {
   const philosophersBeforeXIX = data.reduce(
     (totalPhilosophers, philosopher) => {

@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Playwrite+MX&family=Playwrite+US+Trad&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Playwrite+MX&family=Playwrite+US+Trad&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Silkscreen&display=swap');
+body{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
 body::before {
   background-image: url("assets/image.jpg");
   background-repeat: no-repeat;
@@ -22,184 +27,89 @@ main{
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: center;
 }
 header {
   font-family: "Playwrite MX", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  padding: .5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: (22, 22, 22);
   border-top: 2px solid #8C342B;
   border-bottom: 2px solid #8C342B;
 }
-
 h2 {
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
   font-style: italic;
-  color-scheme: (22, 22, 22)
 }
 .search-section{
+  margin:5px 0;
+  width:80%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: row nowrap;
   align-items: baseline;
-  width: 90%;
+  justify-content: flex-end;
 }
-.nombreFilosofo {
-  width: 200px;
-  height: 15px;
-  background-color: white;
-  border: 1px solid rgb(0, 0, 0); 
-  padding: 5px;
-  font-family: "Lora", serif;
-  border-radius: 50px;
-}
-#search{
-  width: 60px;
-  height: 20px;
-  border-radius: 0%;
+button {
+  box-shadow: 3px 3px 3px black;
+  cursor: pointer;
   background-color: #260101;
   color: rgb(255, 255, 255);
   margin-left: 20px;
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: bold;
+}
+.nombreFilosofo {
+  width: 60%;
+  height: 30px;
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0); 
+  font-family: "Lora", serif;
+  border-radius: 50px;
 }
 .side-menu {
-  width: 250px;
+  width: 20%;
   height: 100vh;
   position: fixed; 
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #A68C76;
   transition: transform 0.5s ease;
-  transform: translateX(-100%);
-  z-index: 1;
+  transform: translateX(100%);
+  z-index: 2;
+  box-shadow: 10px 10px 10px black;
 }
 .filters {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: center;
-  z-index: 2;
 }
-
 label {
-  position: center;
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: bold;
-  margin-left: 15px;
   margin-top: 25px;
 }
-
 select {
   cursor: pointer;
-  width: 50%;
-  height: 40%;
   background-color: #d9bba9e1;
   color: rgb(0, 0, 0);
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
   margin-left: 5px;
 }
-
-button {
-  cursor: pointer;
-  width: 70px;
-  height: 100%;
-  border-radius: 0%;
-  background-color: #260101;
-  color: rgb(255, 255, 255);
-  margin-left: 20px;
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: bold;
-  margin-top: 25px;
-}
-
 .philosophersList {
-  width: 90%;
-  margin: 60px 0;
-  max-width: 1200px;
-  min-height: 100vh;
+  margin: 20px 0 ;
   display: flex;
-  align-items: baseline;
   justify-content: space-evenly;
-  gap: 3.5em;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
 }
-
 .philosophersCard {
+  padding: 1%;
+  margin: 1%;
   display: flex;
   align-items: center;
   justify-content: baseline;
-  flex-flow: column wrap;
+  flex-flow: row nowrap;
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
   background-color: #d8d7d3;
   border: solid #A68C76 5px;
+  width: 45%;
   flex-grow: 1;
-  flex-basis: 100px;
-  max-width: 800px;
-  min-width: 500px;
-  max-height: 570px;
-  min-height: 570px;
 }
-
 .image-container {
-  margin-top: 10px;
-  width: 40%;
-  height: 200px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-[itemprop="givenName"]{
-  display: flex;
-  flex-flow: column wrap;
-  line-height: 10px;
-  margin-bottom: 10px;
-}
-.philosophersCard p {
-  line-height: 1px;
-}
-.info{
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  width: 100%;
-  height: 350px;
-  overflow: hidden;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: baseline;
-}
-[itemprop="mainWorks"]{
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: baseline;
-  height: 1700px;
-  width: 100%;
-  line-height: 1px;
+  padding:2%;
 }
 .image-container img {
   width: 100%;
@@ -207,58 +117,43 @@ button {
   object-fit: cover;
   border-radius: 100px;
 }
-#stats {
+#stats{
+  margin-bottom: 3%;
   font-family: "Silkscreen", sans-serif;
   font-weight: 700;
-  font-style: normal;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  background-color: #d8d7d32a;
+  background-color: #d8d7d360;
+  width: 100%;
 }
-
-tr {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
-
 footer {
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-end;
   border-top: 2px solid #8C342B;
   border-bottom: 2px solid #8C342B;
-  padding: .5em;
+  padding: 5px;
 }
-
 input:checked ~.side-menu {
-  transform: translateX(0);
+  transform: translateX(0%);
 }
-
 input[type="checkbox"]  {
   display: none;
 }
-
 #btn-label {
-  height: 30px;
-  width: 50px;
+  box-shadow: 4px 4px 4px black;
+  margin-left: 15px;
   text-align: center;
   border-radius: 2px;
   cursor: pointer;
-  box-shadow: 0 0 0px rgb(0, 0, 0, 0.3);
   z-index: 1;
   background-color: #260101;
   color: white;
-  font-size: 10px;
-  line-height: 30px;
+  padding: .5%;
 }
 #close-btn {
   align-self: flex-end;
@@ -267,14 +162,12 @@ input[type="checkbox"]  {
   color: black;
   background: none;
   border: none;
-  padding: 0.5em;
-  margin-bottom: 1em;
 }
 #statsButton{
+  width: 25%;
+  box-shadow: 3px 3px 3px black;
+  margin-bottom: 2%;
   cursor: pointer;
-  width: 30%;
-  height: 100%;
-  border-radius: 0%;
   background-color: #260101;
   color: rgb(255, 255, 255);
   margin-left: 20px;
@@ -284,3 +177,130 @@ input[type="checkbox"]  {
   font-style: bold;
   margin-top: 25px;  
 }
+
+@media (max-width:480px){
+ .search-section{
+    width:100%;
+ }
+ .side-menu{
+  width: 30%;
+ }
+ select{
+  width:80%;
+  height: 20%;
+  font-size: 10px;
+ }
+ label{
+  font-size: 10px;
+ }
+ button{
+  width: 15%;
+  height:10%;
+  font-size:7px;
+  margin-left:1.5%
+ }
+ .nombreFilosofo{
+  width: 40%;
+  height:15%
+ }
+ #statsButton{
+  width:60%;
+ }
+ .image-container{
+  width:40%;
+  height: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 1%;
+ }
+.philosophersCard{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: baseline;
+  font-size: 10px;
+}
+header {
+font-size: 10px;
+}
+h2{
+font-size: 15px;
+}
+#btn-label {
+font-size: 7px;
+width: 10%;
+height:5%;
+margin-left:1.5%
+}
+#stats{
+  width:100%;
+  font-size: 10px;
+}
+tr{
+  display: flex;
+  flex-flow:column nowrap;
+  width:10%;
+}
+footer{
+  font-size: 10px;
+}
+  }
+  @media (min-width:481px) and (max-width:1024px){
+    .side-menu{
+     width: 35%;
+    }
+  button{
+    width: 15%;
+    height:15%;
+    font-size:10px;
+    margin-left:1.5%
+    }
+    label{
+      font-size:12px
+    }
+    select{
+      width:70%;
+      font-size: 10px;
+    }
+    .nombreFilosofo{
+     width: 50%;
+     height:15%
+    }
+    #statsButton{
+     width:60%;
+    }
+    .image-container{
+      width:50%;
+      align-items: center;
+      justify-content: center;
+    }
+   .philosophersCard{
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: baseline;
+     font-size: 12px;
+   }
+   header {
+   font-size: 15px;
+   }
+   h2{
+   font-size: 15px;
+   }
+   #btn-label {
+   font-size: 10px;
+   width: 10%;
+   height:5%;
+   margin-left:1.5%
+   }
+   #stats{
+     width:100%;
+     font-size: 15px;
+   }
+   tr{
+     display: flex;
+     flex-flow:column nowrap;
+   }
+   footer{
+     font-size: 10px;
+   }
+     }

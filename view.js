@@ -2,6 +2,7 @@ export const renderItems = (data) => {
   //crear ul en donde se pondrán las li//
   const ul = document.createElement("ul");
   ul.setAttribute("class", "philosophersList")
+  ul.setAttribute("style", "padding-right:40px")
   //método forEach para crear un li para cada objeto del array//
   data.forEach(function (philosophers) {
     const card = document.createElement("li");
@@ -13,10 +14,10 @@ export const renderItems = (data) => {
     //insertar contenido html al li//
     card.innerHTML = `
     <div class = "image-container">
-        <img src="${philosophers.imageUrl}" alt="${philosophers.name}" itemprop="image"/>
-        </div>
-        <div class = "info">
-    <h3 itemprop="givenName"><strong>${philosophers.name}</strong></h3>
+      <img src="${philosophers.imageUrl}" alt="${philosophers.name}" itemprop="image"/>
+      <h3 itemprop="givenName"><strong>${philosophers.name}</strong></h3>
+    </div>
+    <div class ="info">
     <p itemprop="description"> ${philosophers.shortDescription}</p>
     <p itemprop="branchOfPhilosophy"><strong>Ramas de la filosofía:</strong> ${philosophers.branchOfPhilosophy.join(", ")}</p>
     <p itemprop="typeOfPhilosophy"><strong>Corrientes:</strong> ${philosophers.typeOfPhilosophy.join(", ")}</p>
@@ -28,7 +29,8 @@ export const renderItems = (data) => {
     .map((work) =>
       `<p> <i>  ${work.title} </i> —  ${work.year}</p>`).join(" ")} 
     </div>
-    </div>`;
+    </div>
+    `;
     //agregar tarjeta al ul//
     ul.appendChild(card);
   });

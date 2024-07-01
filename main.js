@@ -28,19 +28,16 @@ searchButton.addEventListener("click",()=>{
   const ulElement=renderItems(filteredData)
   rootElement.appendChild(ulElement)
 })
-/*
+
 //para que la barra de busqueda funcione con enter
-searchButton.addEventListener("keypress", (event)=>{
+searchName.addEventListener("keypress", (event)=>{
   if(event.key === "Enter"){
-    searchButton.addEventListener("click", ()=>{
-      const nameSelected = searchName.value
-      filteredData = filterData(data, "name", nameSelected)
-      rootElement.innerHTML=""
-      const ulElement=renderItems(filteredData)
-      rootElement.appendChild(ulElement)
-    })
-  }
-})*/
+    const nameSelected = searchName.value
+    filteredData = filterData(data, "name", nameSelected)
+    rootElement.innerHTML=""
+    const ulElement=renderItems(filteredData)
+    rootElement.appendChild(ulElement)
+  }})
 //función de filtrado por rama//
 branchSelector.addEventListener("change", () => {
   //evento change registra cambios en la selección//
@@ -101,5 +98,48 @@ statsButton.addEventListener("click", () => {
   statsParagraphs.innerHTML = `<p> Hay un promedio de ${womenPhilosophers} mujeres filosofas</p>  
   <p> Alrededor de ${philosophersBeforeXIX}% de los filósofos son anteriores al siglo XIX</p>
   <p> Hay un promedio de ${analyticPhilosopher} filósofos analítcos `;
-  statsSection.appendChild(statsParagraphs); // Añadir el p al cuerpo del documento
+  statsSection.appendChild(statsParagraphs); // Añadir el p al cuerpo del documento//
+  
+  google.charts.load('current', {'packages':['corechart']});//crear gráficos//
+  google.charts.setOnLoadCallback(drawGenderChart);
+  google.charts.setOnLoadCallback(drawClassificationChart);
+  function drawGenderChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Gender');
+    data.addColumn('number', 'Philosophers');
+    data.addRows([
+      ['Women', 2],
+      ['Men', 22],
+    ]);
+    var options = {
+      title: 'Filósofos por género',
+      is3D: true,
+      width: 300,
+      height: 240,
+      backgroundColor: 'transparent',
+      colors: ["#8C342B", "#59352D", "#854738", "#D98E73", "#D9BBA9", "#B56449"]
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('gender_chart_div'));
+    chart.draw(data, options);
+  }
+  function drawClassificationChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Classification');
+    data.addColumn('number', 'Philosophers');
+    data.addRows([
+      ['Analítica', 4],
+      ['Continental', 20],
+    ]);
+    var options = {
+      title: 'Filósofos por tradición',
+      is3D: true,
+      width: 300,
+      height: 240,
+      backgroundColor: 'transparent',
+      colors: ["#8C342B", "#59352D", "#854738", "#D98E73", "#D9BBA9", "#B56449"]
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('class_chart_div'));
+    chart.draw(data, options);
+  }
 });
+
