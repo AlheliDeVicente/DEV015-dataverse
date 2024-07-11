@@ -23,7 +23,7 @@ export const filterData = function (data, filterBy, value) {
       //tercer filtro tradición filosófica//
       if (filterBy === "classification" && value) {
         const filteredData = data.filter((philosopher) => {
-          return philosopher.facts.classification === value;
+          return philosopher.facts.filterBy === value;
         });
         return filteredData;
       }
